@@ -16,4 +16,4 @@
   
   
 ###First working version
-![v1](https://raw.githubusercontent.com/Robert-Wett/CorrectHorseBatteryStaple/master/doc/chbsV2.png)
+![v1](https://raw.githubusercontent.com/Robert-Wett/CorrectHorseBatteryStaple/master/doc/chbsV2.gif)
