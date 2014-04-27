@@ -13,4 +13,7 @@
  
 ####Stack:
  - Node + angular
-     -  Python really is awesome for the back-end lifting, though this is pretty simple stuff. To be honest, this is the first time I've experimented with Node.js as a command line tool to accomplish the base functionality. Not too bad.
+  
+  
+###First working version
+![v1](https://raw.githubusercontent.com/Robert-Wett/CorrectHorseBatteryStaple/master/doc/chbsV1.png)
