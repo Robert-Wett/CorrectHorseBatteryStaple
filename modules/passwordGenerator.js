@@ -8,7 +8,10 @@ var lines = fs.readFileSync('./modules/reduced-brit-a-z.txt', 'utf8').split('\n'
 for (var l in lines){
   var line = lines[l];
   if (line) {
-    dictArray.push(line[0].toUpperCase() + line.slice(1));
+    dictArray.push(line);
+    // Instead of doing this stuff everytime, I've just altered the
+    // data source to include these changes
+    // dictArray.push(line[0].toUpperCase() + line.slice(1));
   }
 }
 
@@ -19,7 +22,7 @@ function buildPassword(num) {
   var ret = [];
   for (var i = 0; i < num; i++) {
     var word = dictArray[_.random(0, max)];
-    ret.push(word.slice(0, -1));
+    ret.push(word);
   }
   return {
     numWords: num,
