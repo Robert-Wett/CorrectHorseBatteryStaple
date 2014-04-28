@@ -16,20 +16,17 @@ h1 {
   height:30%;
 }
 
+@media(max-width: 775px) {
+  .git-fork {
+    visibility: hidden;
+  }
+}
+
 @media(max-width: 720px) {
   h1 {
     font-size: 35px;
   }
   .password {
     font-size: 120%%;
-  }
-  .git-fork {
-    visibility: hidden;
-  }
-}
-
-@media(max-width: 775px) {
-  .git-fork {
-    visibility: hidden;
   }
 }
