@@ -17,16 +17,24 @@ for (var l in lines){
 
 var max = dictArray.length;
 
-function buildPassword(num) {
+function buildPassword(num, json) {
   num = num || 4;
-  var ret = [];
+  var wordBank = [];
+  var returnValue;
   for (var i = 0; i < num; i++) {
-    var word = dictArray[_.random(0, max)];
-    ret.push(word);
+    var word = dictArray[_.random(0, max)].trim();
+    wordBank.push(word);
   }
+
+  if (json) {
+    returnValue = JSON.stringify(wordBank);
+  } else {
+    returnValue = wordBank.join(" . ");
+  }
+
   return {
     numWords: num,
-    pass: ret.join(" . ")
+    pass: returnValue
   };
 }
 

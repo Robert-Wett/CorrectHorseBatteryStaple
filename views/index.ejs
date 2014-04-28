@@ -4,6 +4,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
     <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
     <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
     <title><%= topTitle %></title>
@@ -18,9 +19,9 @@
 
     <br><br><br>
 
-    <div class="container-full">
+    <div class="container-full" onclick="loadNewPass()">
         <div class="well col-lg-12 text-center v-center">
-            <h2 class="password"><%= pass %></h2>
+            <h2 class="password"><span class="holder"><%= pass %></span></h2>
         </div>
     </div>
 <div class="git-fork">
