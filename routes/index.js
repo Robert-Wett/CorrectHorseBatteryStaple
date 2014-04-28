@@ -15,8 +15,8 @@ var index = function(req, res) {
   res.render('index', {
     pass: pass.pass,
     topTitle: 'CHBS',
-    title: 'CorrectHorseBatteryStaple',
-    subHeader: "getcho'self a new password playah"
+    title: 'Correct Horse Battery Staple',
+    subHeader: "refresh to get a new password"
   });
 };
 
