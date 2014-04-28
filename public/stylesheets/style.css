@@ -12,6 +12,10 @@ h1 {
   font-weight:bold;
 }
 
+.container {
+  height:30%;
+}
+
 @media(max-width: 720px) {
   h1 {
     font-size: 35px;
