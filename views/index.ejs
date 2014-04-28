@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
     <title><%= topTitle %></title>
 </head>
-<body>
+<body onclick="loadNewPass()">
     <div class="container-full">
         <div class="col-lg-12 text-center v-center">
             <h1><%= title %></h1>
@@ -19,7 +19,7 @@
 
     <br><br><br>
 
-    <div class="container-full fadeMe" onclick="loadNewPass()">
+    <div class="container-full fadeMe">
         <div class="well col-lg-12 text-center v-center">
             <h2 class="password"><span class="holder"><%= pass %></span></h2>
         </div>
