@@ -5,6 +5,8 @@ module.exports = {
   index: function(req, res) {
     var num = req.params.num || 4;
     var pass = password.getPass(num);
+    // Seems dumb now that I've implemented it.
+    //var pass = password.getAlliterative();
     res.render('index', {
       pass: pass.pass,
       topTitle: 'CHBS',
