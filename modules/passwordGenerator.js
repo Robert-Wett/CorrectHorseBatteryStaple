@@ -5,7 +5,7 @@ var _         = require('underscore');
 var lines = fs.readFileSync('./modules/reduced-brit-a-z.txt', 'utf8').split('\n');
 _.map(lines, function(line) {
   dictArray.push(line);
-})
+});
 
 
 // We'll just assume 4 for now, don't want to deal with
@@ -16,8 +16,9 @@ function buildAlliterativePassword(json) {
   var firstBank = [];
   var secondBank = [];
   var firstChar = alpha[_.random(0, alpha.length)];
-  console.log(firstChar);
   var secondChar;
+  var word;
+  var i;
 
   while (true) {
     secondChar = alpha[_.random(0, alpha.length)];
@@ -37,13 +38,13 @@ function buildAlliterativePassword(json) {
 
   var wordBank = [];
   var returnValue;
-  for (var i = 0; i < 2; i++) {
-    var word = firstBank[_.random(0, firstBank.length)].trim();
+  for (i = 0; i < 2; i++) {
+    word = firstBank[_.random(0, firstBank.length)].trim();
     wordBank.push(word);
   }
 
-  for (var i = 0; i < 2; i++) {
-    var word = secondBank[_.random(0, secondBank.length)].trim();
+  for (i = 0; i < 2; i++) {
+    word = secondBank[_.random(0, secondBank.length)].trim();
     wordBank.push(word);
   }
 
