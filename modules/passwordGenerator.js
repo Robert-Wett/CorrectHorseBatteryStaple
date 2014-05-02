@@ -13,15 +13,17 @@ _.map(lines, function(line) {
 function buildAlliterativePassword(json) {
   num = 4;
   var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // shorthand to cut down on the passed variables
+  var len = alpha.length - 1;
   var firstBank = [];
   var secondBank = [];
-  var firstChar = alpha[_.random(0, alpha.length)];
+  var firstChar = alpha[_.random(0, len)];
   var secondChar;
   var word;
   var i;
 
   while (true) {
-    secondChar = alpha[_.random(0, alpha.length)];
+    secondChar = alpha[_.random(0, len)];
     if (secondChar !== firstChar)
       break;
   }
