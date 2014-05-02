@@ -15,7 +15,7 @@ module.exports = {
 
   v2: function(req, res) {
     var num = req.params.num || 4;
-    var pass = password.getAlliterative();
+    var pass = password.getAlliterative(true);
     // TODO: fix static file references
     res.render('indexv2', {
       pass: pass.pass,
@@ -34,8 +34,7 @@ module.exports = {
   },
 
   apiv2: function(req, res) {
-    var num = req.params.num || 4;
-    var pass = password.getAlliterative(num, true);
+    var pass = password.getAlliterative(true);
     res.writeHead(200, {'Content-Type': 'text/json' });
     res.write(pass.pass);
     res.end();
