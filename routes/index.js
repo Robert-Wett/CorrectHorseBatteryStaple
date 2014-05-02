@@ -17,7 +17,7 @@ module.exports = {
     var num = req.params.num || 4;
     var pass = password.getAlliterative();
     // TODO: fix static file references
-    res.render('indexV2', {
+    res.render('indexv2', {
       pass: pass.pass,
       topTitle: 'CHBS',
       title: 'Correct Horse Battery Staple',

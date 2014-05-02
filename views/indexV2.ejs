@@ -6,7 +6,7 @@
     <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script>
         var loadNewPass = function() {
-            var url = '/apiv2';
+            var url = '/api/v2';
             $(".container-full.fadeMe").fadeOut(250, function() {
                 $.ajax(url).success(function(data) {
                     var display = data.join(" . ");
