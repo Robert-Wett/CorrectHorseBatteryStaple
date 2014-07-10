@@ -38,5 +38,9 @@ module.exports = {
     res.writeHead(200, {'Content-Type': 'text/json' });
     res.write(pass.pass);
     res.end();
+  },
+
+  somewhatSecure: function(req, res) {
+    res.render('somewhatSecure');
   }
 };
