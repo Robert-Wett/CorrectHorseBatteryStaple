@@ -40,7 +40,7 @@ module.exports = {
     res.end();
   },
 
-  somewhatSecure: function(req, res) {
-    res.render('somewhatSecure');
+  local: function(req, res) {
+    res.render('local');
   }
 };

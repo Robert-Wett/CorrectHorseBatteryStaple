@@ -6,16 +6,17 @@
     <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script src="app.js"></script>
-    <script src="somewhatSecure.js"></script>
+    <script src="local.js"></script>
     <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>CBHS</title>
+    <title>CHBS</title>
 </head>
 <body onclick="CHBS.loadNewPass()">
     <div class="container-full">
         <div class="col-lg-12 text-center v-center">
-            <h1>CHBS</h1>
+            <h1>Correct.Horse.Battery.Staple</h1>
             <p class="lead">Click for a new password</p>
+          <blockquote id="loader" style="display:none;">Loading dictionary file...</blockquote>
         </div>
     </div>
 

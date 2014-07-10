@@ -18,36 +18,45 @@
 
 
 // Application Holder
-var CHBS = {};
+var CHBS = {
+  dict: {}
+};
 
-CHBS.dict = $.getJSON("dictionary.json", function(dict) {
-  return dict;
-})
-
-CHBS.buildPassword = function(num) {
-  var wordBank = []
-    , returnValue;
-  num = num || 4;
-
-  for (var i = 0; i < num; i++) {
-    var word = dict[_.random(0, dict.length)].trim();
-    wordBank.push(word);
+CHBS.getDictRef = function(callback) {
+  if (Object.keys(CHBS.dict).length === 0) {
+    $("#loader").fadeIn(50);
+    $.getJSON("./dictionary.json", function(dict) {
+      $("#loader").fadeOut(50);
+      CHBS.dict = dict;
+      callback(dict);
+    });
   }
+  else
+    callback(CHBS.dict);
+};
 
-  returnValue = wordBank.join(" . ");
+CHBS.buildPassword = function(num, callback) {
+  num          = num || 4;
+  var wordBank = []
+    , i        = 0
+    , word;
 
-  return {
-    numWords: num,
-    pass: returnValue
-  };
+  CHBS.getDictRef(function(dict) {
+     for (i = 0; i < num; i++) {
+      word = dict[_.random(0, dict.length)].trim();
+      wordBank.push(word);
+    }
+
+    CHBS.password = wordBank.join(" . ");
+    callback(CHBS.password);
+  });
 }
 
 CHBS.loadNewPass = function() {
-  var password;
-
     $(".container-full.fadeMe").fadeOut(250, function() {
-      password = CHBS.buildPassword();
-      $(".holder").html(password[pass]);
-      $(".container-full.fadeMe").fadeIn(250);
+      CHBS.buildPassword(4, function(pass) {
+        $(".holder").html(pass);
+        $(".container-full.fadeMe").fadeIn(250);
+      });
     });
 };
