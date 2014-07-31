@@ -11,7 +11,7 @@ _.map(lines, function(line) {
 // We'll just assume 4 for now, don't want to deal with
 // odds for a stupid little feature like this.
 function buildAlliterativePassword(json) {
-  num = 4;
+  var num = 4;
   var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // shorthand to cut down on the passed variables
   var len = alpha.length - 1;

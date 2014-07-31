@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
-    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title><%= topTitle %></title>
     <script>
         var loadNewPass = function() {
             var url = '/api/v2';
@@ -15,12 +19,20 @@
                 });
             });
         };
+    $(function() {
+        $(document).keyup(function(evt) {
+            evt.preventDefault();
+            if (evt.keyCode == 32) {
+                loadNewPass();
+            }
+        }).keydown(function(evt) {
+            if (evt.keyCode == 32)
+                evt.preventDefault();
+        });
+    });
     </script>
-    <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.css" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title><%= topTitle %></title>
 </head>
-<body onclick="loadNewPass()">
+<body>
     <div class="container-full">
         <div class="col-lg-12 text-center v-center">
             <h1><%= title %></h1>
@@ -30,7 +42,7 @@
 
     <br><br><br>
 
-    <div class="container-full fadeMe">
+    <div class="container-full fadeMe" >
         <div class="well col-lg-12 text-center v-center">
             <h2 class="password"><span class="holder"><%= pass %></span></h2>
         </div>

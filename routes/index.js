@@ -15,13 +15,12 @@ module.exports = {
 
   v2: function(req, res) {
     var num = req.params.num || 4;
-    var pass = password.getAlliterative(true);
-    // TODO: fix static file references
-    res.render('indexv2', {
+    var pass = password.getAlliterative();
+    res.render('indexV2', {
       pass: pass.pass,
       topTitle: 'CHBS',
       title: 'Correct Horse Battery Staple',
-      subHeader: "click to get a new password"
+      subHeader: "Press space to load another"
     });
   },
 
