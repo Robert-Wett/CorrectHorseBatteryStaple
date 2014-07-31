@@ -2,26 +2,28 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script data-require="jquery@*" data-semver="2.0.3" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script data-require="bootstrap@*" data-semver="3.1.1" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
+    <script src="local.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <title><%= topTitle %></title>
+    <title>CHBS</title>
 </head>
 <body>
     <div class="container-full">
         <div class="col-lg-12 text-center v-center">
-            <h1><%= title %></h1>
-            <p class="lead"><%= subHeader %></p>
+            <h1>Correct.Horse.Battery.Staple</h1>
+            <p class="lead">Press space to load another</p>
+          <blockquote id="loader" style="display:none;">Loading dictionary file...</blockquote>
         </div>
     </div>
 
     <br><br><br>
 
-    <div class="container-full fadeMe" >
+    <div class="container-full fadeMe">
         <div class="well col-lg-12 text-center v-center">
-            <h2 class="password"><span class="holder"><%= pass %></span></h2>
+            <h2 class="password"><span class="holder">Press . Space</span></h2>
         </div>
     </div>
 <div class="git-fork">

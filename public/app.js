@@ -8,3 +8,14 @@ var loadNewPass = function() {
         });
     });
 };
+$(function() {
+    $(document).keyup(function(evt) {
+        evt.preventDefault();
+        if (evt.keyCode == 32) {
+            loadNewPass();
+        }
+    }).keydown(function(evt) {
+        if (evt.keyCode == 32)
+            evt.preventDefault();
+    });
+})

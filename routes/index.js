@@ -9,7 +9,7 @@ module.exports = {
       pass: pass.pass,
       topTitle: 'CHBS',
       title: 'Correct Horse Battery Staple',
-      subHeader: "click to get a new password"
+      subHeader: "Press your spacebar to load another"
     });
   },
 
@@ -38,5 +38,9 @@ module.exports = {
     res.writeHead(200, {'Content-Type': 'text/json' });
     res.write(pass.pass);
     res.end();
+  },
+
+  local: function(req, res) {
+    res.render('local');
   }
 };
